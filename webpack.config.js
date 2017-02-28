@@ -16,7 +16,7 @@ module.exports = function(env) {
     output: {
       path: path.join(__dirname, '/dist/'),
       filename: '[name].bundle.js',
-      publicPath: '/',
+      publicPath: '/timegone/',
       sourceMapFilename: '[name].map'
     },
     devServer: {
