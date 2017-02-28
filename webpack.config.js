@@ -37,7 +37,7 @@ module.exports = function(env) {
         }, {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ['babel-loader']
+          use: ['babel-loader'],
         }
       ]
     },
