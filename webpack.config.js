@@ -7,7 +7,9 @@ const precss = require('precss'); // 实现类Sass的功能，变量，嵌套，
 const autoprefixer = require('autoprefixer'); // 自动添加浏览器前缀
 
 module.exports = function(env) {
-  const dev = env === 'dev' ? true : false;
+  const dev = env === 'dev'
+    ? true
+    : false;
   return {
     entry: {
       app: 'index.js'
@@ -23,7 +25,7 @@ module.exports = function(env) {
       contentBase: path.resolve(__dirname, './dist'),
       clientLogLevel: 'none',
       hot: true,
-      noInfo: true,
+      noInfo: true
     },
     module: {
       rules: [
@@ -37,16 +39,16 @@ module.exports = function(env) {
         }, {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ['babel-loader'],
+          use: ['babel-loader']
         }
       ]
     },
     plugins: [
       // new CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
       new webpack.DefinePlugin({
-         'process.env': {
-             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-         }
+        'process.env': {
+          'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }
       }),
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /\.css$/g,
@@ -60,9 +62,7 @@ module.exports = function(env) {
       }),
       new ExtractTextPlugin('bundle.css'),
       new HtmlWebpackPlugin({filename: 'index.html', template: 'src/index.html', inject: true}),
-      new webpack.LoaderOptionsPlugin({
-        debug: false
-      }),
+      new webpack.LoaderOptionsPlugin({debug: false}),
     ],
     resolve: {
       extensions: [
