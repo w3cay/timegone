@@ -4,7 +4,7 @@
   },
   "name": "timegone",
   "description": "",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "devDependencies": {
     "autoprefixer": "^6.7.6",
@@ -31,7 +31,7 @@
     "dev": "webpack-dev-server --progress --colors --hot --inline --env dev",
     "build": "webpack --progress --colors -p --env pro",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "git subtree push --prefix dist origin gh-pages"
+    "postbuild": "git add . && git commit -m 'publish new release' && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
