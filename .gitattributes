@@ -1,0 +1,6 @@
+#忽略编译文件 git diff 首先执行 git config diff.nodiff.command /usr/bin/true
+# 参考 http://www.jianshu.com/p/8ec1b32f2e13
+src/* diff=nodiff
+src/**/*.js diff=nodiff
+src/**/*.css diff=nodiff
+src/**/*.html diff=nodiff
