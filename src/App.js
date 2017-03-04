@@ -9,8 +9,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Hello, world!</h1>
+      <div className="app">
+        <h3>光阴荏苒，日月如梭</h3>
         <TimeGone></TimeGone>
       </div>
     );
