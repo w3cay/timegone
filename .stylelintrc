@@ -5,5 +5,5 @@
     "max-nesting-depth": 2,
     "number-leading-zero": "never"
   },
-  "configBasedir": '/'
+  "configBasedir": '/src/'
 }
